@@ -5,10 +5,10 @@ import os
 
 load_dotenv()
 
-database_url = f"postgresql://{os.getenv('userdb')}:{os.getenv('password')}@localhost:5432/test_db_fast_api"
+database_url = os.getenv('database_url')
 
 engine = create_engine(database_url) 
-SessionLocal = sessionmaker(bind=engine, autoflush=False)
+SessionLocal = sessionmaker(bind=engine, autoflush=True)
 
 def get_db(): 
     db = SessionLocal()

@@ -9,3 +9,4 @@ class ItemModel(Base):
     title = Column(String, index=True)
     description = Column(String, index=True)
     image_file = Column(String, index=True)
+    price = Column(Integer, index=True)

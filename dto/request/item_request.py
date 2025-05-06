@@ -5,4 +5,7 @@ class ItemsModel(BaseModel):
     title: str
     description: str
     image: str
-    price: float 
+    price: int
+
+class UpdatedItem(ItemsModel):
+    id: int
